@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="TestNG Suite">
+	<test name="simulator">
+		<classes>
+			<class name="simulator.tests_simulator" />
+		</classes>
+	</test>
+
+	<test name="iOS">
+		<classes>
+			<class name="iOS.tests_iOS" />
+		</classes>
+	</test>
+
+	<test name="Android">
+		<classes>
+			<class name="android.tests_Android" />
+		</classes>
+	</test>
+
+</suite>

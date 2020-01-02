@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-01-01T17:42:44 EST" name="Default suite" finished-at="2020-01-01T17:43:33 EST" duration-ms="49076">
+    <groups>
+    </groups>
+    <test started-at="2020-01-01T17:42:44 EST" name="Default test" finished-at="2020-01-01T17:43:33 EST" duration-ms="49076">
+      <class name="android.tests_Android">
+        <test-method is-config="true" signature="reportSetup()[pri:0, instance:android.tests_Android@6107227e]" started-at="2020-01-01T17:42:44 EST" name="reportSetup" finished-at="2020-01-01T17:42:44 EST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportSetup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:android.tests_Android@6107227e]" started-at="2020-01-01T17:42:44 EST" name="setup" finished-at="2020-01-01T17:43:30 EST" duration-ms="45833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login1()[pri:0, instance:android.tests_Android@6107227e]" started-at="2020-01-01T17:43:30 EST" name="login1" description="Launch app and tap sign in" finished-at="2020-01-01T17:43:31 EST" duration-ms="574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login1 -->
+        <test-method is-config="true" signature="after()[pri:0, instance:android.tests_Android@6107227e]" started-at="2020-01-01T17:43:31 EST" name="after" finished-at="2020-01-01T17:43:33 EST" duration-ms="2630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- android.tests_Android -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

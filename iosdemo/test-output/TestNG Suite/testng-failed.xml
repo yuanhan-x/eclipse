@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestNG Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="iOS(failed)">
+    <classes>
+      <class name="iOS.tests_iOS">
+        <methods>
+          <include name="after"/>
+          <include name="test_2"/>
+          <include name="test_4"/>
+          <include name="setup"/>
+          <include name="test_3"/>
+          <include name="reportSetup"/>
+        </methods>
+      </class> <!-- iOS.tests_iOS -->
+    </classes>
+  </test> <!-- iOS(failed) -->
+</suite> <!-- Failed suite [TestNG Suite] -->
