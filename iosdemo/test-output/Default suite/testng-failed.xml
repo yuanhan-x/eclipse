@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="android.tests_Android">
+      <class name="simulator.Tests_Sim">
         <methods>
-          <include name="reportSetup"/>
+          <include name="login"/>
           <include name="setup"/>
-          <include name="login1"/>
-          <include name="after"/>
+          <include name="TrackHome"/>
+          <include name="TrackAdd"/>
+          <include name="TrackReview"/>
         </methods>
-      </class> <!-- android.tests_Android -->
+      </class> <!-- simulator.Tests_Sim -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

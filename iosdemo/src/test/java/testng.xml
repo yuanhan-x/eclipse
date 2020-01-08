@@ -3,19 +3,18 @@
 <suite name="TestNG Suite">
 	<test name="simulator">
 		<classes>
-			<class name="simulator.tests_simulator" />
+			<class name="simulator.Tests_Simulator" />
 		</classes>
 	</test>
-
+	
 	<test name="iOS">
 		<classes>
-			<class name="iOS.tests_iOS" />
+			<class name="iOS.Tests_iOS" />
 		</classes>
 	</test>
-
 	<test name="Android">
 		<classes>
-			<class name="android.tests_Android" />
+			<class name="android.Tests_Android" />
 		</classes>
 	</test>
 

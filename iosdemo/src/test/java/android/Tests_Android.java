@@ -1,6 +1,5 @@
 package android;
 
-import java.util.List;
 import java.util.function.Consumer;
 
 import org.openqa.selenium.By;
@@ -9,16 +8,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import io.appium.java_client.MobileElement;
 
-public class tests_Android extends base_android {
-
-	public static ExtentTest test;
+public class Tests_Android extends Base_Android {
 
 	@Test(description = "Launch app and tap sign in")
 	public void login1() {
