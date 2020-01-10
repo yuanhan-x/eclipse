@@ -1,138 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="16" passed="13" failed="3" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-08T10:36:40 EST" name="Default suite" finished-at="2020-01-08T10:39:35 EST" duration-ms="174629">
+  <suite started-at="2020-01-10T16:41:06 EST" name="TestNG Suite" finished-at="2020-01-10T16:41:26 EST" duration-ms="19550">
     <groups>
-      <group name="Calendar">
-        <method signature="Tests_Sim.CalendarAct()[pri:4, instance:simulator.Tests_Sim@7a4ccb53]" name="CalendarAct" class="simulator.Tests_Sim"/>
-        <method signature="Tests_Sim.CalendarMed()[pri:3, instance:simulator.Tests_Sim@7a4ccb53]" name="CalendarMed" class="simulator.Tests_Sim"/>
-        <method signature="Tests_Sim.welcome()[pri:2, instance:simulator.Tests_Sim@7a4ccb53]" name="welcome" class="simulator.Tests_Sim"/>
-      </group> <!-- Calendar -->
-      <group name="Medications">
-        <method signature="Tests_Sim.MedAct()[pri:8, instance:simulator.Tests_Sim@7a4ccb53]" name="MedAct" class="simulator.Tests_Sim"/>
-        <method signature="Tests_Sim.MedActEmp()[pri:5, instance:simulator.Tests_Sim@7a4ccb53]" name="MedActEmp" class="simulator.Tests_Sim"/>
-        <method signature="Tests_Sim.MedAdd()[pri:7, instance:simulator.Tests_Sim@7a4ccb53]" name="MedAdd" class="simulator.Tests_Sim"/>
-        <method signature="Tests_Sim.MedPst()[pri:12, instance:simulator.Tests_Sim@7a4ccb53]" name="MedPst" class="simulator.Tests_Sim"/>
-        <method signature="Tests_Sim.MedPstEmp()[pri:6, instance:simulator.Tests_Sim@7a4ccb53]" name="MedPstEmp" class="simulator.Tests_Sim"/>
-        <method signature="Tests_Sim.MedRem()[pri:11, instance:simulator.Tests_Sim@7a4ccb53]" name="MedRem" class="simulator.Tests_Sim"/>
-        <method signature="Tests_Sim.MedRev()[pri:9, instance:simulator.Tests_Sim@7a4ccb53]" name="MedRev" class="simulator.Tests_Sim"/>
-        <method signature="Tests_Sim.MedTake()[pri:10, instance:simulator.Tests_Sim@7a4ccb53]" name="MedTake" class="simulator.Tests_Sim"/>
-      </group> <!-- Medications -->
-      <group name="Login">
-        <method signature="Tests_Sim.login()[pri:1, instance:simulator.Tests_Sim@7a4ccb53]" name="login" class="simulator.Tests_Sim"/>
-      </group> <!-- Login -->
-      <group name="Track">
-        <method signature="Tests_Sim.TrackAdd()[pri:14, instance:simulator.Tests_Sim@7a4ccb53]" name="TrackAdd" class="simulator.Tests_Sim"/>
-        <method signature="Tests_Sim.TrackHome()[pri:15, instance:simulator.Tests_Sim@7a4ccb53]" name="TrackHome" class="simulator.Tests_Sim"/>
-        <method signature="Tests_Sim.TrackNew()[pri:13, instance:simulator.Tests_Sim@7a4ccb53]" name="TrackNew" class="simulator.Tests_Sim"/>
-        <method signature="Tests_Sim.TrackReview()[pri:15, instance:simulator.Tests_Sim@7a4ccb53]" name="TrackReview" class="simulator.Tests_Sim"/>
-      </group> <!-- Track -->
+      <group name="Registration">
+        <method signature="TestsII_Sim.Reg(java.lang.String)[pri:30, instance:simulator.TestsII_Sim@436a4e4b]" name="Reg" class="simulator.TestsII_Sim"/>
+      </group> <!-- Registration -->
+      <group name="Onboarding">
+        <method signature="TestsII_Sim.NewUser()[pri:29, instance:simulator.TestsII_Sim@436a4e4b]" name="NewUser" class="simulator.TestsII_Sim"/>
+      </group> <!-- Onboarding -->
     </groups>
-    <test started-at="2020-01-08T10:36:40 EST" name="Default test" finished-at="2020-01-08T10:39:35 EST" duration-ms="174629">
-      <class name="simulator.Tests_Sim">
-        <test-method is-config="true" signature="setup()[pri:0, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:36:40 EST" name="setup" finished-at="2020-01-08T10:37:25 EST" duration-ms="44557" status="PASS">
+    <test started-at="2020-01-10T16:41:06 EST" name="login" finished-at="2020-01-10T16:41:26 EST" duration-ms="19550">
+      <class name="simulator.TestsII_Sim">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:simulator.TestsII_Sim@436a4e4b]" started-at="2020-01-10T16:41:06 EST" name="setup" finished-at="2020-01-10T16:41:15 EST" duration-ms="8627" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[iOS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13.2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[30D36B05-AE4B-417F-8FC8-9092F083A303]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[iPhone 8 Plus]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8101]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:1, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:37:25 EST" name="login" description="login to run tests" finished-at="2020-01-08T10:37:49 EST" duration-ms="23929" status="PASS">
+        <test-method signature="NewUser()[pri:29, instance:simulator.TestsII_Sim@436a4e4b]" started-at="2020-01-10T16:41:15 EST" name="NewUser" description="New user - notifications pop-up" finished-at="2020-01-10T16:41:26 EST" duration-ms="10844" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="welcome()[pri:2, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:37:49 EST" name="welcome" description="view and dismiss the welcome pop-up in calendar" finished-at="2020-01-08T10:38:01 EST" depends-on-methods="simulator.Tests_Sim.login" duration-ms="11741" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- welcome -->
-        <test-method signature="CalendarMed()[pri:3, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:38:01 EST" name="CalendarMed" description="view the medications tab in calendar" finished-at="2020-01-08T10:38:04 EST" depends-on-methods="simulator.Tests_Sim.login" duration-ms="3229" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CalendarMed -->
-        <test-method signature="CalendarAct()[pri:4, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:38:04 EST" name="CalendarAct" description="view the activity tab in calendar" finished-at="2020-01-08T10:38:08 EST" depends-on-methods="simulator.Tests_Sim.login" duration-ms="4041" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CalendarAct -->
-        <test-method signature="MedActEmp()[pri:5, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:38:08 EST" name="MedActEmp" description="view the active meds tab without any medications" finished-at="2020-01-08T10:38:12 EST" depends-on-methods="simulator.Tests_Sim.login" duration-ms="3848" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MedActEmp -->
-        <test-method signature="MedPstEmp()[pri:6, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:38:12 EST" name="MedPstEmp" description="view the past meds tab without any medications" finished-at="2020-01-08T10:38:16 EST" depends-on-methods="simulator.Tests_Sim.login" duration-ms="4539" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MedPstEmp -->
-        <test-method signature="MedAdd()[pri:7, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:38:16 EST" name="MedAdd" description="add a new medication" finished-at="2020-01-08T10:38:34 EST" depends-on-methods="simulator.Tests_Sim.login" duration-ms="18233" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MedAdd -->
-        <test-method signature="MedAct()[pri:8, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:38:34 EST" name="MedAct" description="view the active meds tab" finished-at="2020-01-08T10:38:39 EST" depends-on-methods="simulator.Tests_Sim.login" duration-ms="4812" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MedAct -->
-        <test-method signature="MedRev()[pri:9, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:38:39 EST" name="MedRev" description="review a scheduled medication" finished-at="2020-01-08T10:38:47 EST" depends-on-methods="simulator.Tests_Sim.MedAdd" duration-ms="7377" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MedRev -->
-        <test-method signature="MedTake()[pri:10, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:38:47 EST" name="MedTake" description="take a scheduled medication" finished-at="2020-01-08T10:38:54 EST" depends-on-methods="simulator.Tests_Sim.MedAdd" duration-ms="7300" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MedTake -->
-        <test-method signature="MedRem()[pri:11, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:38:54 EST" name="MedRem" description="remove a scheduled medication" finished-at="2020-01-08T10:39:04 EST" depends-on-methods="simulator.Tests_Sim.MedAdd" duration-ms="9598" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MedRem -->
-        <test-method signature="MedPst()[pri:12, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:39:04 EST" name="MedPst" description="view the past meds tab" finished-at="2020-01-08T10:39:08 EST" depends-on-methods="simulator.Tests_Sim.login" duration-ms="4768" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MedPst -->
-        <test-method signature="TrackNew()[pri:13, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:39:08 EST" name="TrackNew" description="View the track homepage without a check-in" finished-at="2020-01-08T10:39:11 EST" depends-on-methods="simulator.Tests_Sim.login" duration-ms="2398" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TrackNew -->
-        <test-method signature="TrackAdd()[pri:14, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:39:11 EST" name="TrackAdd" description="Add new check-in" finished-at="2020-01-08T10:39:14 EST" depends-on-methods="simulator.Tests_Sim.login" duration-ms="3270" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Yuanhans-MacBook-Air.local', ip: 'fe80:0:0:0:1437:4535:9d9f:a632%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
-Driver info: io.appium.java_client.ios.IOSDriver
-Capabilities {app: /Users/yuanhanxu/Documents/..., browserName: , databaseEnabled: false, deviceName: iPhone 11, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: iOS, platformVersion: 13.2, sessionName: Automation test session, takesScreenshot: true, udid: DC0E27FB-4E1A-4DD5-B3D8-9FC..., webStorageEnabled: false}
-Session ID: f5fb8edb-e109-4287-b8da-c8882863eecb
-*** Element info: {Using=-ios class chain, value=**/XCUIElementTyperOther/XCUIElementTypeOther/XCUIElementTypeButton[3]]}]]>
-            </message>
+        </test-method> <!-- NewUser -->
+        <test-method signature="Reg(java.lang.String)[pri:30, instance:simulator.TestsII_Sim@436a4e4b]" started-at="2020-01-10T16:41:26 EST" name="Reg" description="Registration" finished-at="2020-01-10T16:41:26 EST" duration-ms="14" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2@@]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Yuanhans-MacBook-Air.local', ip: 'fe80:0:0:0:1437:4535:9d9f:a632%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
-Driver info: io.appium.java_client.ios.IOSDriver
-Capabilities {app: /Users/yuanhanxu/Documents/..., browserName: , databaseEnabled: false, deviceName: iPhone 11, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: iOS, platformVersion: 13.2, sessionName: Automation test session, takesScreenshot: true, udid: DC0E27FB-4E1A-4DD5-B3D8-9FC..., webStorageEnabled: false}
-Session ID: f5fb8edb-e109-4287-b8da-c8882863eecb
-*** Element info: {Using=-ios class chain, value=**/XCUIElementTyperOther/XCUIElementTypeOther/XCUIElementTypeButton[3]]}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.FindsByIosClassChain.findElementByIosClassChain(FindsByIosClassChain.java:26)
-at io.appium.java_client.MobileBy$ByIosClassChain.findElement(MobileBy.java:334)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at simulator.Tests_Sim.TrackAdd(Tests_Sim.java:262)
+              <![CDATA[java.lang.NullPointerException
+at simulator.TestsII_Sim.Reg(TestsII_Sim.java:25)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -163,170 +90,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TrackAdd -->
-        <test-method signature="TrackHome()[pri:15, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:39:14 EST" name="TrackHome" description="View the track homepage with a check-in" finished-at="2020-01-08T10:39:24 EST" depends-on-methods="simulator.Tests_Sim.login" duration-ms="10361" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.IosNsPredicate: type == 'XCUIElementTypeButton' AND label == 'Track' (tried for 10 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.IosNsPredicate: type == 'XCUIElementTypeButton' AND label == 'Track' (tried for 10 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at simulator.Tests_Sim.TrackHome(Tests_Sim.java:293)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Yuanhans-MacBook-Air.local', ip: 'fe80:0:0:0:1437:4535:9d9f:a632%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
-Driver info: io.appium.java_client.ios.IOSDriver
-Capabilities {app: /Users/yuanhanxu/Documents/..., browserName: , databaseEnabled: false, deviceName: iPhone 11, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: iOS, platformVersion: 13.2, sessionName: Automation test session, takesScreenshot: true, udid: DC0E27FB-4E1A-4DD5-B3D8-9FC..., webStorageEnabled: false}
-Session ID: f5fb8edb-e109-4287-b8da-c8882863eecb
-*** Element info: {Using=-ios predicate string, value=type == 'XCUIElementTypeButton' AND label == 'Track'}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.FindsByIosNSPredicate.findElementByIosNsPredicate(FindsByIosNSPredicate.java:26)
-at io.appium.java_client.MobileBy$ByIosNsPredicate.findElement(MobileBy.java:454)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 29 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TrackHome -->
-        <test-method signature="TrackReview()[pri:15, instance:simulator.Tests_Sim@7a4ccb53]" started-at="2020-01-08T10:39:24 EST" name="TrackReview" description="Review a check-in" finished-at="2020-01-08T10:39:35 EST" depends-on-methods="simulator.Tests_Sim.login" duration-ms="10288" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.IosNsPredicate: type == 'XCUIElementTypeButton' AND label == 'Track' (tried for 10 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.IosNsPredicate: type == 'XCUIElementTypeButton' AND label == 'Track' (tried for 10 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at simulator.Tests_Sim.TrackReview(Tests_Sim.java:306)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Yuanhans-MacBook-Air.local', ip: 'fe80:0:0:0:1437:4535:9d9f:a632%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
-Driver info: io.appium.java_client.ios.IOSDriver
-Capabilities {app: /Users/yuanhanxu/Documents/..., browserName: , databaseEnabled: false, deviceName: iPhone 11, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: iOS, platformVersion: 13.2, sessionName: Automation test session, takesScreenshot: true, udid: DC0E27FB-4E1A-4DD5-B3D8-9FC..., webStorageEnabled: false}
-Session ID: f5fb8edb-e109-4287-b8da-c8882863eecb
-*** Element info: {Using=-ios predicate string, value=type == 'XCUIElementTypeButton' AND label == 'Track'}
-at jdk.internal.reflect.GeneratedConstructorAccessor14.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.FindsByIosNSPredicate.findElementByIosNsPredicate(FindsByIosNSPredicate.java:26)
-at io.appium.java_client.MobileBy$ByIosNsPredicate.findElement(MobileBy.java:454)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 29 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TrackReview -->
-      </class> <!-- simulator.Tests_Sim -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- Reg -->
+      </class> <!-- simulator.TestsII_Sim -->
+    </test> <!-- login -->
+  </suite> <!-- TestNG Suite -->
 </testng-results>

@@ -2,16 +2,19 @@ package simulator;
 
 import java.io.IOException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.annotations.Parameters;
+
 import io.appium.java_client.MobileBy;
 
 public class Tests_Sim extends Base_Sim {
 
 	@Test(priority = 1, description = "login to run tests", groups = {"Login"})
-	public void login() throws IOException  {
+	@Parameters({"email", "pw"})
+	public void login(String email, String pw) throws IOException  {
 
 		screen = "Start-Up-Screen";
 		captureScreenShots();
@@ -25,17 +28,17 @@ public class Tests_Sim extends Base_Sim {
 		captureScreenShots();
 
 		driver.findElement(By.className("XCUIElementTypeTextField")).click();
-		driver.findElement(By.className("XCUIElementTypeTextField")).sendKeys("1@");
+		driver.findElement(By.className("XCUIElementTypeTextField")).sendKeys(email);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("XCUIElementTypeSecureTextField")));
 		driver.findElement(By.className("XCUIElementTypeSecureTextField")).click();
-		driver.findElement(By.className("XCUIElementTypeSecureTextField")).sendKeys("123");
+		driver.findElement(By.className("XCUIElementTypeSecureTextField")).sendKeys(pw);
 
 		driver.findElementByAccessibilityId("log in").click();
 		driver.findElementByAccessibilityId("log in").click();
 	}
 
-	@Test(priority = 2, description = "view and dismiss the welcome pop-up in calendar",dependsOnMethods = "login", groups = {"Calendar"})
+	@Test(priority = 2, description = "view and dismiss the welcome pop-up in calendar", groups = {"Calendar"})
 	public void welcome() throws IOException {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Calendar'")));
@@ -51,7 +54,7 @@ public class Tests_Sim extends Base_Sim {
 		driver.findElementByAccessibilityId("later").click(); 
 	}
 
-	@Test(priority = 3, description = "view the medications tab in calendar", dependsOnMethods = "login", groups = {"Calendar"})
+	@Test(priority = 3, description = "view the medications tab in calendar", dependsOnGroups = {"Login"}, groups = {"Calendar"})
 	public void CalendarMed() throws IOException {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Calendar'")));
@@ -62,7 +65,7 @@ public class Tests_Sim extends Base_Sim {
 		screen = "Home-Calendar";
 		captureScreenShots();
 	}
-	@Test(priority = 4, description = "view the activity tab in calendar", dependsOnMethods = "login", groups = {"Calendar"})
+	@Test(priority = 4, description = "view the activity tab in calendar", dependsOnGroups = {"Login"}, groups = {"Calendar"})
 	public void CalendarAct() throws IOException {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Calendar'")));
@@ -75,7 +78,7 @@ public class Tests_Sim extends Base_Sim {
 		captureScreenShots();
 	} 
 
-	@Test(priority = 5, description = "view the active meds tab without any medications", dependsOnMethods = "login", groups = {"Medications"})
+	@Test(priority = 5, description = "view the active meds tab without any medications", dependsOnGroups = {"Login"}, groups = {"Medications"})
 	public void MedActEmp() throws IOException {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Medications'")));
@@ -88,7 +91,7 @@ public class Tests_Sim extends Base_Sim {
 
 	}
 
-	@Test(priority = 6, description = "view the past meds tab without any medications", dependsOnMethods = "login", groups = {"Medications"})
+	@Test(priority = 6, description = "view the past meds tab without any medications", dependsOnGroups = {"Login"}, groups = {"Medications"})
 	public void MedPstEmp() throws IOException {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Medications'")));
@@ -102,7 +105,7 @@ public class Tests_Sim extends Base_Sim {
 
 	}
 
-	@Test(priority = 7, description = "add a new medication", dependsOnMethods = "login", groups = {"Medications"})
+	@Test(priority = 7, description = "add a new medication", dependsOnGroups = {"Login"}, groups = {"Medications"})
 	public void MedAdd() throws IOException {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Medications'")));
@@ -141,7 +144,7 @@ public class Tests_Sim extends Base_Sim {
 		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeStaticText' AND label == 'okay!'")).click();
 	}
 
-	@Test(priority = 8, description = "view the active meds tab", dependsOnMethods = "login", groups = {"Medications"})
+	@Test(priority = 8, description = "view the active meds tab", dependsOnGroups = {"Login"}, groups = {"Medications"})
 	public void MedAct() throws IOException {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Medications'")));
@@ -152,7 +155,7 @@ public class Tests_Sim extends Base_Sim {
 		screen = "Medications-Active";
 		captureScreenShots();
 	}
-	
+
 	@Test(priority = 9, description = "review a scheduled medication", dependsOnMethods = "MedAdd", groups = {"Medications"})
 	public void MedRev() throws IOException {
 
@@ -225,7 +228,7 @@ public class Tests_Sim extends Base_Sim {
 
 	}
 
-	@Test(priority = 12, description = "view the past meds tab", dependsOnMethods = "login", groups = {"Medications"})
+	@Test(priority = 12, description = "view the past meds tab", dependsOnGroups = {"Login"}, groups = {"Medications"})
 	public void MedPst() throws IOException {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Medications'")));
@@ -238,7 +241,7 @@ public class Tests_Sim extends Base_Sim {
 		captureScreenShots();
 	}
 
-	@Test(priority = 13, description = "View the track homepage without a check-in", dependsOnMethods = "login", groups = {"Track"})
+	@Test(priority = 13, description = "View the track homepage without a check-in", dependsOnGroups = {"Login"}, groups = {"w"})
 	public void TrackNew() throws IOException {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Track'")));
@@ -250,7 +253,7 @@ public class Tests_Sim extends Base_Sim {
 		captureScreenShots();	
 
 	}
-	@Test(priority = 14, description = "Add new check-in", dependsOnMethods = "login", groups = {"Track"})
+	@Test(priority = 14, description = "Add new check-in", dependsOnGroups = {"Login"}, groups = {"w"})
 	public void TrackAdd() throws IOException {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Track'")));
@@ -259,7 +262,7 @@ public class Tests_Sim extends Base_Sim {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'log your side effects'")));
 		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'log your side effects'")).click();
 
-		driver.findElement(MobileBy.iOSClassChain("**/XCUIElementTyperOther/XCUIElementTypeOther/XCUIElementTypeButton[3]]")).click();
+		driver.findElement(MobileBy.iOSClassChain("XCUIElementTypeWindow/**/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther[1]")).click();
 
 		screen = "Check-In-Step1";
 		captureScreenShots();
@@ -280,46 +283,230 @@ public class Tests_Sim extends Base_Sim {
 
 		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'save'")).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("nice!")));
-		
+
 		screen = "Check-In-Step3-Popup";
 		captureScreenShots();
 
 		driver.findElement(MobileBy.AccessibilityId("nice!")).click();
 	}
 
-	@Test(priority = 15, description = "View the track homepage with a check-in", dependsOnMethods = "login", groups = {"Track"})
+	@Test(priority = 15, description = "View the track homepage with a check-in", dependsOnGroups = {"Login"}, groups = {"Track"})
 	public void TrackHome() throws IOException {
-		
+
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Track'")));
 		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Track'")).click();
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("LC_add_outcome!")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND name == 'Track'")));
 
 		screen = "Track-ReturningUser";
 		captureScreenShots();
-
 	}
-	
-	@Test(priority = 15, description = "Review a check-in", dependsOnMethods = "login", groups = {"Track"})
+	@Test(priority = 16, description = "Review a check-in", dependsOnGroups = {"Login"}, groups = {"Track"})
 	public void TrackReview() throws IOException {
-		
+
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Track'")));
 		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Track'")).click();
 
 		driver.findElement(MobileBy.iOSNsPredicateString("type = 'XCUIElementTypeStaticText' AND label CONTAINS ':'")).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND label == 'Review Check In'")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND name == 'Review Check In'")));
 
 		screen = "Track-Review-Checkin";
 		captureScreenShots();
-		
-		driver.findElement(MobileBy.AccessibilityId("backArrow")).click();	
 
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click();	
 	}
 
+	@Test(priority = 17, description = "View the articles activity", dependsOnGroups = {"Login"}, groups = {"Articles"})
+	public void Articles() throws IOException {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Articles'")));
+		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Articles'")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND name == 'LupusCorner News'")));
+
+		screen = "Articles";
+		captureScreenShots();
+	}
+
+	@Test(priority = 18, description = "View the discuss activity", dependsOnGroups = {"Login"}, groups = {"Discuss"})
+	public void DiscussHome() throws IOException {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Discuss'")));
+		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Discuss'")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND name == 'Discuss'")));
+
+		screen = "Discuss-Feed";
+		captureScreenShots();
+	}
+
+	@Test(priority = 19, description = "Search for a post", dependsOnGroups = {"Login"}, groups = {"Discuss"})
+	public void DiscussSearch() throws IOException {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Discuss'")));
+		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Discuss'")).click();
+
+		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeSearchField' AND label == 'Search Posts'")).click();
+		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeSearchField' AND label == 'Search Posts'")).sendKeys("Pain");
+		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeSearchField' AND label == 'Search Posts'")).sendKeys(Keys.ENTER);
+
+		screen = "Discuss-SearchPost"; 
+		captureScreenShots();
+	}
+
+	@Test(priority = 20, description = "Add a new post", dependsOnGroups = {"Login"}, groups = {"Discuss"})
+	public void DiscussNew() throws IOException {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Discuss'")));
+		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Discuss'")).click();
+
+		driver.findElement(MobileBy.AccessibilityId("addPost")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND name == 'New Post'")));
+
+		screen = "Discuss-NewPost"; 
+		captureScreenShots();
+
+		driver.findElement(MobileBy.className("XCUIElementTypeSwitch")).click();
+
+		screen = "Discuss-NewPost-Anonymous"; 
+		captureScreenShots();
+
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click();	
+	}
+
+	@Test(priority = 21, description = "Comment on a post", dependsOnGroups = {"Login"}, groups = {"Discuss"})
+	public void DiscussComment() throws IOException {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Discuss'")));
+		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Discuss'")).click();
+
+		driver.findElement(MobileBy.iOSClassChain("XCUIElementTypeWindow/**/XCUIElementTypeTextView[1]")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND name == 'Comment'")));
+
+		screen = "Discuss-Comment"; 
+		captureScreenShots();
+
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click();	
+	}
+
+	@Test(priority = 22, description = "View your notifications", dependsOnGroups = {"Login"}, groups = {"Discuss"})
+	public void DiscussNotif() throws IOException {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Discuss'")));
+		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeButton' AND label == 'Discuss'")).click();
+
+		driver.findElement(MobileBy.iOSClassChain("XCUIElementTypeWindow/**/XCUIElementTypeImage[2]")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND label == 'Notifications'")));
+
+		screen = "Discuss-Notifications"; 
+		captureScreenShots();
+
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click();	
+	}
+
+	@Test(priority = 23, description = "View the Edit menu", dependsOnGroups = {"Login"}, groups = {"Edit"})
+	public void EditHome() throws IOException {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("settings icon")));
+		driver.findElement(MobileBy.AccessibilityId("settings icon")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("edit profile")));
+
+		screen = "Edit"; 
+		captureScreenShots();
+
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click(); 
+	}
+
+	@Test(priority = 24, description = "Edit menu - edit profile", dependsOnGroups = {"Login"}, groups = {"Edit"})
+	public void EditProf() throws IOException {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("settings icon")));
+		driver.findElement(MobileBy.AccessibilityId("settings icon")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("edit profile")));
+		driver.findElement(MobileBy.AccessibilityId("edit profile")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND visible == true")));
+
+		screen = "Edit-Profile"; 
+		captureScreenShots();
+
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click(); 
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click(); 
+	}
+
+	@Test(priority = 25, description = "Edit menu - settings", dependsOnGroups = {"Login"}, groups = {"Edit"})
+	public void EditSet() throws IOException {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("settings icon")));
+		driver.findElement(MobileBy.AccessibilityId("settings icon")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("settings")));
+		driver.findElement(MobileBy.AccessibilityId("settings")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND name == 'Settings'")));
+
+		screen = "Edit-Settings"; 
+		captureScreenShots();
+
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click(); 
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click(); 
+	}
+
+	@Test(priority = 26, description = "Edit menu - about", dependsOnGroups = {"Login"}, groups = {"Edit"})
+	public void EditAbout() throws IOException {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("settings icon")));
+		driver.findElement(MobileBy.AccessibilityId("settings icon")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeStaticText' AND label == 'about'")));
+		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeStaticText' AND label == 'about'")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND name == 'About'")));
+
+		screen = "Edit-About"; 
+		captureScreenShots();
+
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click(); 
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click(); 
+	}
+
+	@Test(priority = 27, description = "Terms & Conditions", dependsOnGroups = {"Login"}, groups = {"TC"})
+	public void TC() throws IOException {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("settings icon")));
+		driver.findElement(MobileBy.AccessibilityId("settings icon")).click();
+		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeStaticText' AND label == 'about'")).click();
+		driver.findElement(MobileBy.AccessibilityId("Terms & Conditions")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND name == 'Terms and conditions list'")));
+
+		screen = "Terms-Conditions";
+		captureScreenShots();
+
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click(); 
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click(); 
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click();
+	}
+
+	@Test(priority = 28, description = "Privacy Policy", dependsOnGroups = {"Login"}, groups = {"Privacy"})
+	public void Privacy() throws IOException {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("settings icon")));
+		driver.findElement(MobileBy.AccessibilityId("settings icon")).click();
+		driver.findElement(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeStaticText' AND label == 'about'")).click();
+		driver.findElement(MobileBy.AccessibilityId("Privacy")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.iOSNsPredicateString("type == 'XCUIElementTypeNavigationBar' AND name == 'Privacy Policy List'")));
+
+		screen = "Privacy-Policy";
+		captureScreenShots();
+
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click(); 
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click(); 
+		driver.findElement(MobileBy.AccessibilityId("backArrow")).click();
+	}
 }
-
-
-
-
 
 

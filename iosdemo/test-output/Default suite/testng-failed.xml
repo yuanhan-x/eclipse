@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="simulator.Tests_Sim">
+      <class name="simulator.TestsII_Sim">
         <methods>
-          <include name="login"/>
           <include name="setup"/>
-          <include name="TrackHome"/>
-          <include name="TrackAdd"/>
-          <include name="TrackReview"/>
+          <include name="NewUser"/>
+          <include name="teardown"/>
+          <include name="Reg"/>
         </methods>
-      </class> <!-- simulator.Tests_Sim -->
+      </class> <!-- simulator.TestsII_Sim -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

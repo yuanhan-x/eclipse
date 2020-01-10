@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="TestNG Suite">
-	<test name="simulator">
+	<test name="login">
+		<parameter name="platform" value="iOS" />
+		<parameter name="version" value="13.2" />
+		<parameter name="udid"
+			value="30D36B05-AE4B-417F-8FC8-9092F083A303" />
+		<parameter name="deviceName" value="iPhone 8 Plus" />
+		<parameter name="wdaLocalPort" value="8101" />
+		<parameter name="email" value="3@" />
+		<parameter name="pw" value="123" />
+		<parameter name="reg_email" value="2@@" />
 		<classes>
-			<class name="simulator.Tests_Simulator" />
+			<class name="simulator.TestsII_Sim" />
 		</classes>
-	</test>
-	
-	<test name="iOS">
-		<classes>
-			<class name="iOS.Tests_iOS" />
-		</classes>
-	</test>
-	<test name="Android">
-		<classes>
-			<class name="android.Tests_Android" />
-		</classes>
-	</test>
 
+	</test>
 </suite>
